@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<!--Video CSS-->
+    <style>
+    .video-container {
+        width: 70%;
+        max-width: 400px;
+        margin: 20px auto;
+        text-align: center;
+    }
+    .video-container img {
+        width: 50%;
+        border-radius: 10px;
+    }
+    .proceed-button {
+        margin-top: 20px;
+        display: flex;
+        justify-content: center;
+    }
+    .proceed-button button {
+        padding: 10px 20px;
+        font-size: 16px;
+        color: #fff;
+        background-color: #05314D;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    .proceed-button button:hover {
+        background-color: #cc0000;
+    }
+    .hidden {
+        display: none;
+    }
+</style>
+<body>
+    <!--Video Placeholder-->
+    <div id="videoSection" class="video-container">
+        <h2>Te Ara ki te Angitu</h2>
+        <h3>Please watch the pre-assignment video</h3>
+        <img src="https://via.placeholder.com/600x400" alt="Placeholder for video">
+        <div class="proceed-button">
+            <button onclick="proceedToAssessment()">Proceed</button>
+        </div>
+    </div>
+    <div id="originalAssessment" class="hidden">
+<script>
+    //End of video - start Assessment 
+     function proceedToAssessment() {
+        document.getElementById('videoSection').classList.add('hidden');
+        document.getElementById('originalAssessment').classList.remove('hidden');
+    }
+</script>
+
+</body>
+</html>
